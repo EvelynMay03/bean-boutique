@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <title>Events & Workshops</title>
+</head>
+<body>
+    
+  <header>
+      <div class="top">
+        <div class="logo">
+          <i class="fa-solid fa-mug-hot"></i>
+          Bean Boutique
+        </div>
+        
+        <!-- Hamburger Icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+  
+        <!-- Menu -->
+        <nav class="menu" id="navMenu">
+          <ul>
+            <li><a href="beanboutique.html" >Home</a></li>
+            <li><a href="coffeeselection.html" >Coffee Selections</a></li>
+            <li><a href="brewing-equipment.html">Brewing Equipments</a></li>
+            <li class="current"><a href="#" >Services ⏷</a>
+              <div class="dropdown">
+                  <a href="events.html">Events & Workshops</a>
+                  <a href="offers.html" >Special Offers & Membership Deals</a>
+              </div>
+            </li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="signin.html">Sign In</a></li>
+          </ul>
+        </nav>
+  
+        <!-- Search -->
+        <div class="searchBox">
+          <input type="text" id="productSearch" placeholder="Search.." onkeyup="filterProducts()">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+  </header>
+
+
+    <div class="offerbox">
+        <h1>Special Offers & Subscriptions</h1>
+        
+        <!-- Special Offers Section -->
+        <section class="special-offers">
+            <h2>Current Special Offers</h2>
+            <div class="offers-container">
+                <div class="offer">
+                    
+                    <h3>Buy 1 Get 1 Free</h3>
+                    <p>For a limited time, buy one pack of coffee beans and get another one for free! Stock up and save.</p>
+                    <button>Shop Now</button>
+                </div>
+                <div class="offer">
+                    
+                    <h3>20% Off First Purchase</h3>
+                    <p>Sign up and receive 20% off your first coffee bean purchase. Great savings for new customers!</p>
+                    <button>Claim Offer</button>
+                </div>
+                <div class="offer">
+                   
+                    <h3>Free Shipping Over $50</h3>
+                    <p>Enjoy free shipping on orders over $50. Get your favorite coffee delivered at no extra cost.</p>
+                    <button>Shop Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Subscription Section -->
+        <section class="subscriptions">
+            <h2>Our Subscription Plans</h2>
+            <div class="subscription-container">
+                <div class="subscription">
+                    <h3>Basic Plan</h3>
+                    <p>Perfect for those who want a little coffee boost every month.</p>
+                    <ul>
+                        <li>1 coffee delivery per month</li>
+                        <li>Choose from our premium blends</li>
+                        <li>10% discount on all future orders</li>
+                    </ul>
+                    <button>Subscribe Now - $19.99/month</button>
+                </div>
+                <div class="subscription">
+                    <h3>Premium Plan</h3>
+                    <p>For true coffee lovers who need their caffeine fix regularly.</p>
+                    <ul>
+                        <li>2 coffee deliveries per month</li>
+                        <li>Exclusive access to limited-edition blends</li>
+                        <li>15% discount on all future orders</li>
+                        <li>Free shipping on every order</li>
+                    </ul>
+                    <button>Subscribe Now - $34.99/month</button>
+                </div>
+                <div class="subscription">
+                    <h3>Deluxe Plan</h3>
+                    <p>The ultimate plan for coffee connoisseurs who need their fix every week.</p>
+                    <ul>
+                        <li>4 coffee deliveries per month</li>
+                        <li>Customizable coffee selections</li>
+                        <li>20% discount on all future orders</li>
+                        <li>Free shipping on every order</li>
+                        <li>Exclusive discounts on related coffee accessories</li>
+                    </ul>
+                    <button>Subscribe Now - $59.99/month</button>
+                </div>
+            </div>
+        </section>
+    </div> 
+
+
+
+    <footer class="footer">
+        
+        <!-- Logo Column -->
+        <div class="footer-column">
+          <div class="footer-logo">
+            <i class="fas fa-mug-hot"></i> Bean<br>Boutique
+          </div>
+        </div>
+      
+        <!-- Privacy -->
+        <div class="footer-column">
+          <h3>PRIVACY</h3>
+          <ul>
+            <li>Terms of use</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+      
+        <!-- Services -->
+        <div class="footer-column">
+          <h3>SERVICES</h3>
+          <ul>
+            <li>Shop</li>
+            <li>Other Services</li>
+            <li>Menu</li>
+          </ul>
+        </div>
+      
+        <!-- About Us -->
+        <div class="footer-column">
+          <h3>ABOUT US</h3>
+          <ul>
+            <li>Find Information</li>
+            <li>About us</li>
+            <li>Our Vision</li>
+          </ul>
+        </div>
+      
+        <!-- Information -->
+        <div class="footer-column">
+          <h3>INFORMATION</h3>
+          <ul>
+            <li>Sell Your Products</li>
+            <li>Products & Prices</li>
+          </ul>
+        </div>
+      
+        <!-- Social Media -->
+        <div class="footer-column">
+          <h3>SOCIAL MEDIA</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-youtube" style="color:red;"></i></a>
+            <a href="#"><i class="fab fa-instagram" style="color:#f09433;"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </footer>
+      <script>
+        document.querySelectorAll('.offer button').forEach(button => {
+  button.addEventListener('click', function() {
+    const offerTitle = this.previousElementSibling.previousElementSibling.innerText;
+    
+    if (offerTitle.includes("Buy 1 Get 1 Free")) {
+      alert("Adding 'Buy 1 Get 1 Free' offer to your cart!");
+      // Here you would add logic to add products to the cart
+      window.location.href = "cart.html";  // Navigate to the cart page
+    } else if (offerTitle.includes("20% Off First Purchase")) {
+      alert("Claiming 20% off your first purchase!");
+      // Redirect to sign-up page for new customers
+      window.location.href = "signup.html";
+    } else if (offerTitle.includes("Free Shipping Over $50")) {
+      alert("Enjoy free shipping on orders over $50!");
+      // Here, you'd normally update cart total and show free shipping
+      window.location.href = "coffeeselection.html"; // Navigate to the cart page
+    }
+  });
+});
+
+// Function to handle Subscription buttons (Subscribe Now)
+document.querySelectorAll('.subscription button').forEach(button => {
+  button.addEventListener('click', function() {
+    const planName = this.previousElementSibling.previousElementSibling.previousElementSibling.innerText;
+
+    if (planName.includes("Basic Plan")) {
+      alert("Subscribing to Basic Plan for $19.99/month!");
+      // Logic for subscribing to the Basic Plan
+      window.location.href = "signup.html"; // Redirect to signup page
+    } else if (planName.includes("Premium Plan")) {
+      alert("Subscribing to Premium Plan for $34.99/month!");
+      // Logic for subscribing to the Premium Plan
+      window.location.href = "signup.html"; // Redirect to signup page
+    } else if (planName.includes("Deluxe Plan")) {
+      alert("Subscribing to Deluxe Plan for $59.99/month!");
+      // Logic for subscribing to the Deluxe Plan
+      window.location.href = "signup.html"; // Redirect to signup page
+    }
+  });
+});
+      </script>
+      <script>
+        function toggleMenu() {
+          const navMenu = document.getElementById("navMenu");
+          navMenu.classList.toggle("active");
+        }
+      </script>
+    </body>
+ </html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <script src="js/model.js"></script>
+    <title>Bean Boutique</title>
+</head>
+<body>
+<header>
+    <div class="top">
+      <div class="logo">
+        <i class="fa-solid fa-mug-hot"></i>
+        Bean Boutique
+      </div>
+      <!-- Hamburger Icon -->
+      <div class="hamburger" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+      </div>
+      <!-- Menu -->
+      <nav class="menu" id="navMenu">
+        <ul>
+          <li class="current"><a href="beanboutique.html" >Home</a></li>
+          <li><a href="coffeeselection.html" >Coffee Selections</a></li>
+          <li><a href="brewing-equipment.html">Brewing Equipments</a></li>
+          <li><a href="#">Services ⏷</a>
+            <div class="dropdown">
+                <a href="events.html">Events & Workshops</a>
+                <a href="offers.html">Special Offers & Membership Deals</a>
+            </div>
+          </li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="signin.html">Sign In</a></li>
+        </ul>
+      </nav>
+      <!-- Search -->
+      <div class="searchBox">
+        <input type="text" id="productSearch" placeholder="Search.." onkeyup="filterProducts()">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </div>
+    </div>
+ 
+</header>
+    <section>
+            <section class="hero">
+                <div class="hero-content">
+                  <p style="font-size: 50px; font-weight: bold;">Welcome!</p>
+                  <h3>We serve the richest coffee bean and best equipment <br>selections & Quality Services in the city!</h3>
+        
+                  <a href="coffeeselection.html" class="hero-button">Order Now</a>
+                </div>
+              </section>
+            
+              <!-- Category Bar -->
+              <div class="category-bar">
+                <div class="category">
+                  <i class="fas fa-mug-hot"></i>
+                  <p> Coffee</p>
+                </div>
+                <div class="category">
+                    <i class="fa-solid fa-gears"></i>
+                  <p>Equipment</p>
+                </div>
+                <div class="category">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  <p>Cart</p>
+                </div>
+                <div class="category">
+                    <i class="fa-solid fa-users"></i>
+                  <p>Workshops</p>
+                </div>
+                <div class="category">
+                    <i class="fa-solid fa-envelope"></i>
+                  <p>Contact Us</p>
+                </div>
+              </div>
+
+        <div class="top-section">
+            <div class="page">
+              <img src="images/coffeeselection.jpeg" alt="Coffee Selections ">
+              
+                <h4> Coffee Selections</h4>
+                <p>Coffee beans are actually the seeds of the coffee cherry, a fruit grown on coffee trees.</p>
+              
+            </div>
+            <div class="page">
+              <img src="images/brew.jpg" alt=" Brewing Equipments" >
+              <h4>Brewing Equipments</h4>
+              <p>Coffee brewing equipment encompasses a variety of tools designed to extract the flavors and aromas from coffee grounds.</p>
+            </div>
+            <div class="page">
+              <img src="images/workshop.jpeg" alt="Events and Workshops">
+              <h4>Events and Workshops</h4>
+              <p>We offer a variety of experiences, from learning about coffee origins and brewing methods to tasting and creating unique blends.</p>
+            </div>
+          </div>
+        
+        
+    </section>
+    <!-- Modal Popup -->
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Welcome to Our Coffee Shop!</h2>
+            <p>Get <strong>10% off</strong> your first purchase when you sign up for our newsletter. 🥳🩷</p>
+            <form id="emailSignupForm">
+                <input type="email" id="emailInput" placeholder="Enter your email address" required>
+                <button type="submit" id="emailsubmit">Get My Discount</button>
+            </form>
+            <p class="small-text">We respect your privacy. Unsubscribe at any time.</p>
+        </div>
+    </div>
+
+  <script>
+      function toggleMenu() {
+        const navMenu = document.getElementById("navMenu");
+        navMenu.classList.toggle("active");
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        // Check if user has seen the modal before using localStorage
+        if (!localStorage.getItem('modalShown')) {
+            // Show modal after a short delay (e.g., 2 seconds)
+            setTimeout(function() {
+                const modal = document.getElementById('welcomeModal');
+                modal.style.display = 'block';
+                
+                // Set flag in localStorage to indicate modal has been shown
+                localStorage.setItem('modalShown', 'true');
+            }, 2000);
+        }
+
+    // Close modal when clicking the X button
+    const closeBtn = document.querySelector('.close-btn');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function() {
+                const modal = document.getElementById('welcomeModal');
+                modal.style.display = 'none';
+            });
+        }
+
+    // Close modal when clicking outside the modal content
+    window.addEventListener('click', function(event) {
+        const modal = document.getElementById('welcomeModal');
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    // Handle form submission
+    const emailForm = document.getElementById('emailSignupForm');
+          if (emailForm) {
+              emailForm.addEventListener('submit', function(e) {
+                  e.preventDefault();
+                  const email = document.getElementById('emailInput').value;
+                  
+                  // Here you would typically send the email to your server
+                  // For demonstration, we'll just log it and show a success message
+                  console.log('Email submitted:', email);
+                  
+                  // Display success message
+                  const modalContent = document.querySelector('.modal-content');
+                  modalContent.innerHTML = `
+                      <h2>Thank You!</h2>
+                      <p>Your 10% discount code is: <strong>WELCOME10</strong></p>
+                      <p>We've sent it to your email as well.</p>
+                      <button id="continueShopping" style="margin-top: 20px;">Continue Shopping</button>
+                  `;
+                  
+                  // Add event listener to the new button
+                  document.getElementById('continueShopping').addEventListener('click', function() {
+                      document.getElementById('welcomeModal').style.display = 'none';
+                  });
+                  
+                  // In a real implementation, you would:
+                  // 1. Send the email to your server
+                  // 2. Generate/store the discount code
+                  // 3. Send the code to the user's email
+                  // 4. Potentially set a cookie to track the user's eligibility
+              });
+          }
+      });
+  </script>
+
+
+
+    
+    <footer class="footer">
+        
+        <!-- Logo Column -->
+        <div class="footer-column">
+          <div class="footer-logo">
+            <i class="fas fa-mug-hot"></i> Bean<br>Boutique
+          </div>
+        </div>
+    
+        <!-- Privacy -->
+        <div class="footer-column">
+          <h3>PRIVACY</h3>
+          <ul>
+            <li>Terms of use</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+    
+        <!-- Services -->
+        <div class="footer-column">
+          <h3>SERVICES</h3>
+          <ul>
+            <li>Shop</li>
+            <li>Other Services</li>
+            <li>Menu</li>
+          </ul>
+        </div>
+    
+        <!-- About Us -->
+        <div class="footer-column">
+          <h3>ABOUT US</h3>
+          <ul>
+            <li>Find Information</li>
+            <li>About us</li>
+            <li>Our Vision</li>
+          </ul>
+        </div>
+    
+        <!-- Information -->
+        <div class="footer-column">
+          <h3>INFORMATION</h3>
+          <ul>
+            <li>Sell Your Products</li>
+            <li>Products & Prices</li>
+          </ul>
+        </div>
+    
+        <!-- Social Media -->
+        <div class="footer-column">
+          <h3>SOCIAL MEDIA</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-youtube" style="color:red;"></i></a>
+            <a href="#"><i class="fab fa-instagram" style="color:#f09433;"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </footer>
+    
+    
+</body>
+</html>

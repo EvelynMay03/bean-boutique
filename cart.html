@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/cart_test.js"></script>    
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Cart</title>
+</head>
+<body>
+    
+  <header>
+      <div class="top">
+        <div class="logo">
+          <i class="fa-solid fa-mug-hot"></i>
+          Bean Boutique
+        </div>
+        
+        <!-- Hamburger Icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+  
+        <!-- Menu -->
+        <nav class="menu" id="navMenu">
+          <ul>
+            <li><a href="beanboutique.html" >Home</a></li>
+            <li><a href="coffeeselection.html" >Coffee Selections</a></li>
+            <li><a href="brewing-equipment.html">Brewing Equipments</a></li>
+            <li><a href="#">Services ⏷</a>
+              <div class="dropdown">
+                  <a href="events.html">Events & Workshops</a>
+                  <a href="offers.html">Special Offers & Membership Deals</a>
+              </div>
+            </li>
+            <li class="current"><a href="cart.html" >Cart</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="signin.html">Sign In</a></li>
+          </ul>
+        </nav>
+  
+        <!-- Search -->
+        <div class="searchBox">
+          <input type="text" id="productSearch" placeholder="Search.." onkeyup="filterProducts()">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+  </header>
+
+    <div class="container">
+        
+    </div>
+    <main class="container">
+        <h1>Your Shopping Cart</h1>
+
+        <div class="cart-container">
+            <!-- Cart items container -->
+            <div class="cart-items" id="cartItems">
+                <!-- JavaScript will inject items here -->
+            </div>
+
+            
+            <div class="empty-cart" id="emptyCart">
+                <i class="fas fa-coffee"></i>
+                <h2>Your cart is empty.</h2>
+                <p>Looks like you haven't added anything to your cart yet</p>
+                <a href="brewing-equipment.html" class="btn">Browse Brewing Equipments</a>
+            </div>
+        
+
+            <div class="cart-summary" id="cartSummary" style="display: none;">
+                <h2>Order Summary</h2>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span id="shipping">$5.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax</span>
+                    <span id="tax">$0.00</span>
+                </div>
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span id="total">$0.00</span>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+                <a href="coffeeselection.html" class="continue-shopping">
+                    <i class="fas fa-arrow-left"></i> Continue Shopping
+                </a>
+            </div>
+        </div>
+    </main>
+    <script>
+        function toggleMenu() {
+          const navMenu = document.getElementById("navMenu");
+          navMenu.classList.toggle("active");
+        }
+      </script>
+
+</body>
+</html>

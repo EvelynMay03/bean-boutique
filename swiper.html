@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+
+<body>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <img src="images/slide3.jpg" alt="Slide 1" style="width:100%; height:auto;">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/slide1.jpg" alt="Slide 2" style="width:100%; height:auto;">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/slide2.jpg" alt="Slide 3" style="width:100%; height:auto;">
+            </div>
+        </div>
+
+        <!-- Navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- Pagination dots (optional) -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Core parameters
+            loop: true,           // Infinite looping
+            speed: 500,           // Transition speed (ms)
+
+            // Navigation
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // Pagination (optional)
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            // Responsive breakpoints (optional)
+            breakpoints: {
+                640: {  // On screens >= 640px
+                    slidesPerView: 2,
+                },
+                1024: { // On screens >= 1024px
+                    slidesPerView: 1,
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

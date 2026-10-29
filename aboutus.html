@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+</head>
+<body>
+    
+  <header>
+      <div class="top">
+        <div class="logo">
+          <i class="fa-solid fa-mug-hot"></i>
+          Bean Boutique
+        </div>
+        
+        <!-- Hamburger Icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+  
+        <!-- Menu -->
+        <nav class="menu" id="navMenu">
+          <ul>
+            <li><a href="beanboutique.html" >Home</a></li>
+            <li><a href="coffeeselection.html" >Coffee Selections</a></li>
+            <li><a href="brewing-equipment.html">Brewing Equipments</a></li>
+            <li><a href="#">Services ⏷</a>
+              <div class="dropdown">
+                  <a href="events.html">Events & Workshops</a>
+                  <a href="offers.html">Special Offers & Membership Deals</a>
+              </div>
+            </li>
+            <li><a href="cart.html">Cart</a></li>
+            <li class="current"><a href="aboutus.html" >About Us</a></li>
+            <li><a href="signin.html">Sign In</a></li>
+          </ul>
+        </nav>
+  
+        <!-- Search -->
+        <div class="searchBox">
+          <input type="text" id="productSearch" placeholder="Search.." onkeyup="filterProducts()">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+  </header>
+
+  
+     
+        <section class="aboutus">
+        
+            <div class="aboutus-content">
+              <h3>Our Story</h3> 
+              <p>At Bean Boutique, we are passionate about bringing you the finest, ethically sourced coffee beans. Our journey began with a simple idea: to provide the world with premium coffee beans that not only taste amazing but also support sustainable farming practices.</p>
+              <p>We source our beans directly from trusted farmers around the world, ensuring that every cup of coffee you enjoy helps support the livelihoods of the communities that grow our beans. Our commitment to quality, sustainability, and fairness is at the heart of everything we do.</p>
+            </div>
+            <div class="aboutus-content">
+              <h3>Our Mission & Values</h3>
+            
+              <ul>
+                  <li><strong>Quality:</strong> We select only the finest coffee beans, ensuring that every cup you drink is full of flavor and aroma.</li>
+                  <li><strong>Sustainability:</strong> We are dedicated to supporting environmentally friendly farming practices that promote long-term ecological health.</li>
+                  <li><strong>Community:</strong> We work closely with farmers to create strong partnerships, ensuring fair trade and improved livelihoods for all involved.</li>
+                  <li><strong>Innovation:</strong> We are always exploring new ways to improve our coffee offerings, from unique blends to innovative brewing methods.</li>
+              </ul>
+            </div>
+           
+          
+          
+        </section>
+        
+      <section class="highlight-section">
+        <div class="text-content">
+          <h2>
+            Devoted to showcasing the <br>
+            <strong>natural beauty and culture of our one-of-a-kind surroundings.</strong>
+          </h2>
+          <p>
+            Our coffee embodies the essence of local environment. Inspired by the natural rejuvenating power of the desert landscape, our roasts evoke the rustic flavor of our unique home. Coffee is a source of connection for many cultures, and we aim to showcase the warmth and spirit of the coffee community in ours.
+          </p>
+          <a href="coffeeselection.html" class="shop-button">Shop Now</a>
+        </div>
+        <div class="image-content">
+          <img src="images/coffee-beans-ground-powder_114579-57222.jpg.avif" alt="Woman enjoying coffee in desert" >
+        </div>
+      </section>
+
+       
+ 
+    <footer class="footer">
+        
+        <!-- Logo Column -->
+        <div class="footer-column">
+          <div class="footer-logo">
+            <i class="fas fa-mug-hot"></i> Bean<br>Boutique
+          </div>
+        </div>
+      
+        <!-- Privacy -->
+        <div class="footer-column">
+          <h3>PRIVACY</h3>
+          <ul>
+            <li>Terms of use</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+      
+        <!-- Services -->
+        <div class="footer-column">
+          <h3>SERVICES</h3>
+          <ul>
+            <li>Shop</li>
+            <li>Other Services</li>
+            <li>Menu</li>
+          </ul>
+        </div>
+      
+        <!-- About Us -->
+        <div class="footer-column">
+          <h3>ABOUT US</h3>
+          <ul>
+            <li>Find Information</li>
+            <li>About us</li>
+            <li>Our Vision</li>
+          </ul>
+        </div>
+      
+        <!-- Information -->
+        <div class="footer-column">
+          <h3>INFORMATION</h3>
+          <ul>
+            <li>Sell Your Products</li>
+            <li>Products & Prices</li>
+          </ul>
+        </div>
+      
+        <!-- Social Media -->
+        <div class="footer-column">
+          <h3>SOCIAL MEDIA</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-youtube" style="color:red;"></i></a>
+            <a href="#"><i class="fab fa-instagram" style="color:#f09433;"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </footer>
+      <script>
+        function toggleMenu() {
+          const navMenu = document.getElementById("navMenu");
+          navMenu.classList.toggle("active");
+        }
+      </script>
+</body>
+</html>

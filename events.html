@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <title>Events & Workshops</title>
+</head>
+<body>
+    
+  <header>
+      <div class="top">
+        <div class="logo">
+          <i class="fa-solid fa-mug-hot"></i>
+          Bean Boutique
+        </div>
+        
+        <!-- Hamburger Icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+  
+        <!-- Menu -->
+        <nav class="menu" id="navMenu">
+          <ul>
+            <li><a href="beanboutique.html" >Home</a></li>
+            <li><a href="coffeeselection.html" >Coffee Selections</a></li>
+            <li><a href="brewing-equipment.html">Brewing Equipments</a></li>
+            <li class="current"><a href="#"  >Services ⏷</a>
+              <div class="dropdown">
+                  <a href="events.html" >Events & Workshops</a>
+                  <a href="offers.html">Special Offers & Membership Deals</a>
+              </div>
+            </li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="signin.html">Sign In</a></li>
+          </ul>
+        </nav>
+  
+        <!-- Search -->
+        <div class="searchBox">
+          <input type="text" id="productSearch" placeholder="Search.." onkeyup="filterProducts()">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+  </header>
+
+  <section>
+      <div class="event-container">
+          <h1>Upcoming Events & Workshops</h1>
+          <div class="events">
+              
+            <div class="event">
+                <img src="images/BaristaSkillsMasterclass.webp" alt="Barista Skills Masterclass">
+                <h2>Barista Skills Masterclass</h2>
+                <p>Whether you're an aspiring barista or just passionate about coffee, this hands-on workshop will teach you everything from making espresso to perfecting latte art.</p>
+                <div class ="flexbtn">
+                    <p>July 23th</p>
+                    <button onclick="openRegistrationForm()">Register</button>
+                </div>
+               
+            </div>
+            <div class="event">
+                <img src="images/Coffee&ChocolatePairingEvent.jpeg" alt="Coffee & Chocolate Pairing Event">
+                <h2>Coffee & Chocolate Pairing Event</h2>
+                <p>Explore the delightful combination of coffee and chocolate in this unique event. You'll discover how different coffee beans complement various types of chocolate.</p>
+                <div class ="flexbtn">
+                    <p>July 25th</p>
+                    <button onclick="openRegistrationForm()">Register</button>
+                </div>
+               
+            </div>
+            <div class="event">
+                <img src="images/VirtualCoffeeBrewingClass.webp" alt="Virtual Coffee Brewing Class">
+                <h2>Virtual Coffee Brewing Class</h2>
+                <p>Can't make it in person? Our virtual coffee brewing class brings the coffee shop experience to your home. Learn how to brew specialty coffee using different methods from the comfort of your own kitchen.</p>
+                <div class ="flexbtn">
+                    <p>July 27th</p>
+                    <button onclick="openRegistrationForm()">Register</button>
+                </div>
+               
+            </div>
+            <div class="event">
+                <img src="images/CoffeeTastingExperience.jpeg" alt=" Coffee Tasting Experience">
+                <h2>Coffee Tasting Experience</h2>
+                <p>Join us for an immersive coffee tasting session where you can sample a variety of our finest coffee beans. Learn about the different flavors, aromas, and how to brew the perfect cup from our expert baristas.</p>
+                <div class ="flexbtn">
+                    <p>July 12th</p>
+                    <button onclick="openRegistrationForm()">Register</button>
+                </div>
+               
+            </div>
+            <div class="event">
+                <img src="images/SustainableCoffeeFarmingWorkshop.jpg" alt="Sustainable Coffee Farming Workshop">
+                <h2>Coffee Bean Farming Workshop</h2>
+                <p>Discover the importance of sustainability in coffee production. This workshop will take you through the process of sustainable farming practices and how these practices are implemented by our partners.</p>
+                <div class ="flexbtn">
+                    <p>July 19th</p>
+                    <button onclick="openRegistrationForm()">Register</button>
+                </div>
+               
+            </div>
+        </div>
+      </div>
+
+
+        <div class="form-gallery">
+
+            <div class="event-form">
+              
+              <form action="#" method="post" class="signup-form">
+                <h3>Sign Up for Events</h3>
+                <div class="form-group">
+                  <label for="fullName1">Full Name</label>
+                  <input type="text" id="fullName1" name="fullName" required placeholder="Enter your full name" >
+                </div>
+            
+                <div class="form-group">
+                  <label for="email1">Email Address</label>
+                  <input type="email" id="email1" name="email" required placeholder="Enter your email" >
+                </div>
+            
+                <div class="form-group">
+                  <label for="events">Select Event</label>
+                  <select id="events" name="events" required>
+                    <option value="">Choose an event</option>
+                    <option value="Barista Skills Masterclass">Barista Skills Masterclass</option>
+                    <option value="Coffee & Chocolate Pairing Event">Coffee & Chocolate Pairing Event</option>
+                    <option value="Virtual Coffee Brewing Class">Virtual Coffee Brewing Class </option>
+                    <option value="Coffee Tasting Experience">Coffee Tasting Experience</option>
+                    <option value="Coffee Bean Farming Workshop">Coffee Bean Farming Workshop</option>
+                  </select>
+                </div>
+            
+                <div class="form-group">
+                  <label for="message1">Message (Optional)</label>
+                  <textarea id="message1" name="message" rows="3" placeholder="Any specific requests or notes"></textarea>
+                </div>
+            
+                <div class="form-group checkbox-group">
+                  <label for="terms1">
+                  <input type="checkbox" id="terms1" name="terms1" required > I agree to the <a href="#">Terms and Conditions</a>
+                  </label>
+                </div>
+                <div class="btn-center">
+                  <button type="submit" class="submit-btn">Sign Up</button>
+                </div>
+                
+              </form>
+            </div>
+            <div class="swiper">
+                <h3>Enjoy Our Gallery of Events and Workshops!</h3>
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="images/coffeeeventsandworkshops6.jpg" alt="coffee events and workshops 1" >
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/coffeeeventsandworkshops2.jpg" alt="coffee events and workshops 2" >
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/coffeeeventsandworkshops11.jpg" alt="coffee events and workshops 3">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/coffeeeventsandworkshops4.jpg" alt="coffee events and workshops 4">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/coffeeeventsandworkshops7.webp" alt="coffee events and workshops 5">
+                    </div> 
+                    <div class="swiper-slide">
+                      <img src="images/coffeeeventsandworkshops1.jxl" alt="coffee events and workshops 6">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/coffeeeventsandworkshops8.webp" alt="coffee events and workshops 7">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/coffeeeventsandworkshops5.webp" alt="coffee events and workshops 8">
+                    </div>
+                </div>
+
+                  <!-- Navigation buttons -->
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+
+                  <!-- Pagination dots (optional) -->
+                  <div class="swiper-pagination" ></div>
+            </div>
+        </div>
+  </section>
+
+      <div id="registrationForm" class="registration-form">
+        <h3>Register for the Event!</h3>
+        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name" >
+          </div>
+      
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email" >
+          </div>
+         
+          <div class="flexbuttom">
+            <button class="close-form" onclick="closeRegistrationForm()">Close</button>
+            <button type="submit" class="submit-btn">Sign Up</button>
+          </div>
+          <div class="form-group checkbox-group">
+            <label for="terms">
+              <input type="checkbox" id="terms" name="terms" required > I agree to the <a href="#">Terms and Conditions</a>
+            </label>
+          </div>
+        </form>
+       
+      </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+      const swiper = new Swiper('.swiper', {
+          // Core parameters
+          loop: true,           // Infinite looping
+          speed: 500,           // Transition speed (ms)
+
+          // Navigation
+          navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+          },
+
+          // Pagination (optional)
+          pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+          },
+
+          // Responsive breakpoints (optional)
+          breakpoints: {
+              640: {  // On screens >= 640px
+                  slidesPerView: 2,
+              },
+              1024: { // On screens >= 1024px
+                  slidesPerView: 1,
+              }
+          }
+      });
+  </script>
+
+    <footer class="footer">
+        
+        <!-- Logo Column -->
+        <div class="footer-column">
+          <div class="footer-logo">
+            <i class="fas fa-mug-hot"></i> Bean<br>Boutique
+          </div>
+        </div>
+      
+        <!-- Privacy -->
+        <div class="footer-column">
+          <h3>PRIVACY</h3>
+          <ul>
+            <li>Terms of use</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+      
+        <!-- Services -->
+        <div class="footer-column">
+          <h3>SERVICES</h3>
+          <ul>
+            <li>Shop</li>
+            <li>Other Services</li>
+            <li>Menu</li>
+          </ul>
+        </div>
+      
+        <!-- About Us -->
+        <div class="footer-column">
+          <h3>ABOUT US</h3>
+          <ul>
+            <li>Find Information</li>
+            <li>About us</li>
+            <li>Our Vision</li>
+          </ul>
+        </div>
+      
+        <!-- Information -->
+        <div class="footer-column">
+          <h3>INFORMATION</h3>
+          <ul>
+            <li>Sell Your Products</li>
+            <li>Products & Prices</li>
+          </ul>
+        </div>
+      
+        <!-- Social Media -->
+        <div class="footer-column">
+          <h3>SOCIAL MEDIA</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-youtube" style="color:red;"></i></a>
+            <a href="#"><i class="fab fa-instagram" style="color:#f09433;"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </footer>
+
+      <script>
+        function toggleMenu() {
+          const navMenu = document.getElementById("navMenu");
+          navMenu.classList.toggle("active");
+        }
+      </script>
+
+    <script>
+        function openRegistrationForm() {
+            document.getElementById("registrationForm").style.display = "block";
+        }
+
+        function closeRegistrationForm() {
+            document.getElementById("registrationForm").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>

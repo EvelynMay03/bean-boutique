@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Sign In</title>
+</head>
+<body>
+    <header>
+      <div class="top">
+        <div class="logo">
+          <i class="fa-solid fa-mug-hot"></i>
+          Bean Boutique
+        </div>
+        
+        <!-- Hamburger Icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <!-- Menu -->
+        <nav class="menu" id="navMenu">
+          <ul>
+            <li><a href="beanboutique.html" >Home</a></li>
+            <li><a href="coffeeselection.html" >Coffee Selections</a></li>
+            <li ><a href="brewing-equipment.html" >Brewing Equipments</a></li>
+            <li><a href="#">Services ⏷</a>
+              <div class="dropdown">
+                  <a href="events.html">Events & Workshops</a>
+                  <a href="offers.html">Special Offers & Membership Deals</a>
+              </div>
+            </li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li class="current"><a href="signin.html">Sign In</a></li>
+          </ul>
+        </nav>
+
+        <!-- Search -->
+        <div class="searchBox">
+          <input type="text" id="productSearch" placeholder="Search.." onkeyup="filterProducts()">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+   </header>
+
+  <section class="login-main">
+
+          <div class="login-box">
+            <h2>Welcome Back!</h2>
+            <p>Log in to enjoy your coffee journey.</p>
+            <form action="post">
+              <label for="username">Username</label>
+              <input type="username" id="username" placeholder="Enter your username" required >
+
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Enter your email" required >
+      
+              <label for="password">Password</label>
+              <input type="password" id="password" placeholder="Enter your password" required >
+              <div class="btn-center">
+                <button type="submit">Login</button>
+              </div>
+              
+      
+              <div class="signup-link">
+                <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+              </div>
+            </form>
+          </div>
+      
+  </section>
+
+  <footer class="footer">
+        
+    <!-- Logo Column -->
+    <div class="footer-column">
+      <div class="footer-logo">
+        <i class="fas fa-mug-hot"></i> Bean<br>Boutique
+      </div>
+    </div>
+  
+    <!-- Privacy -->
+    <div class="footer-column">
+      <h3>PRIVACY</h3>
+      <ul>
+        <li>Terms of use</li>
+        <li>Privacy Policy</li>
+      </ul>
+    </div>
+  
+    <!-- Services -->
+    <div class="footer-column">
+      <h3>SERVICES</h3>
+      <ul>
+        <li>Shop</li>
+        <li>Other Services</li>
+        <li>Menu</li>
+      </ul>
+    </div>
+  
+    <!-- About Us -->
+    <div class="footer-column">
+      <h3>ABOUT US</h3>
+      <ul>
+        <li>Find Information</li>
+        <li>About us</li>
+        <li>Our Vision</li>
+      </ul>
+    </div>
+  
+    <!-- Information -->
+    <div class="footer-column">
+      <h3>INFORMATION</h3>
+      <ul>
+        <li>Sell Your Products</li>
+        <li>Products & Prices</li>
+      </ul>
+    </div>
+  
+    <!-- Social Media -->
+    <div class="footer-column">
+      <h3>SOCIAL MEDIA</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-youtube" style="color:red;"></i></a>
+        <a href="#"><i class="fab fa-instagram" style="color:#f09433;"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    function toggleMenu() {
+      const navMenu = document.getElementById("navMenu");
+      navMenu.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>

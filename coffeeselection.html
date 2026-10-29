@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <!-- AOS.js -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Coffee Selection</title>
+</head>
+<body>
+    
+  <header>
+      <div class="top">
+        <div class="logo">
+          <i class="fa-solid fa-mug-hot"></i>
+          Bean Boutique
+        </div>
+        
+        <!-- Hamburger Icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+  
+        <!-- Menu -->
+     
+          <nav class="menu" id="navMenu">
+            <ul>
+              <li><a href="beanboutique.html" >Home</a></li>
+              <li class="current"><a href="coffeeselection.html"  >Coffee Selections</a> </li>
+              <li><a href="brewing-equipment.html">Brewing Equipments</a></li>
+              <li><a href="#">Services ⏷</a>
+                <div class="dropdown">
+                    <a href="events.html">Events & Workshops</a>
+                    <a href="offers.html">Special Offers & Membership Deals</a>
+                </div>
+              </li>
+              <li><a href="cart.html">Cart</a></li>
+              <li><a href="aboutus.html">About Us</a></li>
+              <li><a href="signin.html">Sign In</a></li>
+            </ul>
+        
+        </nav>
+  
+        <!-- Search -->
+        <div class="searchBox">
+          <input type="text" id="productSearch" placeholder="Search.." onkeyup="filterProducts()">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+  
+  </header>
+    
+    <section>
+          <!-- Offer Section -->
+          <div class="offer-section">
+            <h2>This is Our Best Offer!</h2>
+            
+
+            <div class="filter-bar">
+              <label for="filter">Filter by:</label>
+              <select id="filter">
+                <option value="all">All</option>
+                <option value="brazil">Brazil</option>
+                <option value="vietnamese">Vietnamese</option>
+                <option value="burmese">Burmese</option>
+                <option value="arabica">Arabica</option>
+                <option value="colombian">Colombian</option>
+                <option value="sumatra">Sumatra</option>
+                <option value="guatemalan">Guatemalan</option>
+                <option value="jamaican">Jamaican</option>
+                <option value="kenyan">Kenyan</option>
+              </select>
+            </div>
+
+            <div class="card-container">
+              <div class="product-card">
+                <img src="images/Arabica2.avif" class="photo" alt="Arabica coffee">
+                <div class="price">$ 6.99</div>
+                <h3 class="coffeeType">Arabica Coffee</h3>
+                <h6>Grown at high altitudes in Arabica, this bean is known for its vibrant and complex flavor.</h6>
+               
+                <h5>Brewing Method: </h5>
+                <p>Pour-over or Chemex to highlight clarity and brightness.</p>
+                <section class="coffee-tasting-note">
+                  <h5>Tasting Notes:</h5>
+                  <div class="tasting-tags">
+                    <span class="tasting-tag acidity">Acidity</span>
+                    <span class="tasting-tag floral">Floral</span>
+                    <span class="tasting-tag berry">Berry</span>
+                    <span class="tasting-tag sweet">Sweet</span>
+                
+                  </div>
+                </section>
+                <button class="btn" data-name="Ethiopian Yirgacheffe" data-price="6.99">Add to Cart</button>
+              </div>
+        
+              <div class="product-card">
+                <img src="images/bag2.jpeg" class="photo" alt="Colombian Supremo">
+                <div class="price">$ 5.99</div>
+                <h3 class="coffeeType"> Colombian Supremo</h3>
+                <h6>Colombia’s finest grade bean, known for balance and smoothness.</h6>
+                
+                
+                <h5>Brewing Method: </h5>
+                <p>Drip coffee maker or French Press for a well-rounded cup.</p>
+                <section class="coffee-tasting-note">
+                  <h5>Tasting Notes:</h5>
+                  <div class="tasting-tags">
+                    <span class="tasting-tag acidity">Acidity</span>
+                    <span class="tasting-tag cocoa">Cocoa</span>
+                    <span class="tasting-tag nutty">Nutty</span>
+                    <span class="tasting-tag sweet">Sweet</span>
+                    
+                  </div>
+                </section>
+                <button class="btn" data-name="Colombian Supremo" data-price="5.99">Add to Cart</button>
+              </div>
+        
+              <div class="product-card">
+                <img src="images/BrazilCoffee.webp" class="photo" alt="Brazil Santos">
+                <div class="price">$ 7.99</div>
+                <h3 class="coffeeType">Brazil Santos</h3>
+                <h6>Mild and low-acid bean from Brazil, ideal for espresso blends.</h6>
+            
+                <h5>Brewing Method: </h5>
+                <p>Espresso machine or Moka pot for bold flavor.</p>
+                <section class="coffee-tasting-note">
+                  <h5>Tasting Notes:</h5>
+                  <div class="tasting-tags">
+                    <span class="tasting-tag earthy">Earthy</span>
+                    <span class="tasting-tag cocoa">Cocoa</span>
+                    <span class="tasting-tag nutty">Nutty</span>
+                    <span class="tasting-tag sweet">Sweet</span>
+                    
+                  </div>
+                </section>
+                <button class="btn" data-name="Brazil Santos" data-price="7.99">Add to Cart</button>
+              </div>
+              
+              <div class="product-card">
+                <img src="images/cbag3.avif" class="photo" alt="Sumatra Mandheling">
+                <div class="price">$ 8.99</div>
+                <h3 class="coffeeType">Sumatra Mandheling</h3>
+                <h6> Grown in Indonesia, known for its full body and earthy richness.</h6>
+  
+                  <h5>Brewing Method: </h5>
+                  <p>French Press or cold brew to enhance body and texture.</p>
+                  <section class="coffee-tasting-note">
+                    <h5>Tasting Notes:</h5>
+                    <div class="tasting-tags">
+                      <span class="tasting-tag acidity">Acidity</span>
+                      <span class="tasting-tag earthy">Earthy</span>
+                      <span class="tasting-tag spicy">Spicy</span>
+                      <span class="tasting-tag nutty">Nutty</span>
+                     
+                    </div>
+                  </section>
+                <button class="btn" data-name="Sumatra Mandheling" data-price="8.99">Add to Cart</button>
+              </div>
+
+              <div class="product-card">
+                <img src="images/cbag4.avif" class="photo" alt="Guatemalan Antigua">
+                <div class="price">$ 6.99</div>
+                <h3 class="coffeeType">Guatemalan Antigua</h3>
+                <h6>Cultivated in volcanic soil, this bean offers rich and dynamic flavors.</h6>
+               
+                <h5>Brewing Method: </h5>
+                <p>Aeropress or pour-over to bring out complexity.</p>
+                <section class="coffee-tasting-note">
+                  <h5>Tasting Notes:</h5>
+                  <div class="tasting-tags">
+                    <span class="tasting-tag acidity">Acidity</span>
+                    <span class="tasting-tag cocoa">Cocoa</span>
+                    <span class="tasting-tag nutty">Nutty</span>
+                    <span class="tasting-tag spicy">Spicy</span>
+                  </div>
+                </section>
+                <button class="btn" data-name="Guatemalan Antigua" data-price="6.99">Add to Cart</button>
+              </div>
+        
+              <div class="product-card">
+                <img src="images/bag6.jpg" class="photo" alt="Jamaican Blue Mountain">
+                <div class="price">$ 5.99</div>
+                <h3 class="coffeeType">Jamaican Blue Mountain</h3>
+                <h6>most sought-after beans, known for its smooth and mild profile.</h6>
+                
+                
+                <h5>Brewing Method: </h5>
+                <p>Siphon or drip brewer to capture its delicacy.</p>
+                <section class="coffee-tasting-note">
+                  <h5>Tasting Notes:</h5>
+                  <div class="tasting-tags">
+                    <span class="tasting-tag acidity">Acidity</span>
+                    <span class="tasting-tag floral">Floral</span>
+                    <span class="tasting-tag nutty">Nutty</span>
+                    <span class="tasting-tag sweet">Sweet</span>
+                    
+                  </div>
+                </section>
+                <button class="btn" data-name="Jamaican Blue Mountain" data-price="5.99">Add to Cart</button>
+              </div>
+        
+              <div class="product-card">
+                <img src="images/bag7.webp" class="photo" alt="Kenyan AA">
+                <div class="price">$ 7.99</div>
+                <h3 class="coffeeType">Kenyan AA</h3>
+                <h6>A top-grade Kenyan bean known for its lively acidity and fruitiness. </h6>
+               
+                <h5>Brewing Method: </h5>
+                <p>Pour-over or V60 for high clarity and bright flavors. </p>
+                <section class="coffee-tasting-note">
+                  <h5>Tasting Notes:</h5>
+                  <div class="tasting-tags">
+                    <span class="tasting-tag acidity">Acidity</span>
+                    <span class="tasting-tag floral">Floral</span>
+                    <span class="tasting-tag berry">Berry</span>
+                    <span class="tasting-tag sweet">Sweet</span>
+                    
+                  </div>
+                </section>
+                <button class="btn" data-name="Kenyan AA" data-price="7.99">Add to Cart</button>
+              </div>
+        
+              <div class="product-card">
+                <img src="images/bag8.jpg" class="photo" alt="Vietnamese Robusta">
+                <div class="price">$ 8.99</div>
+                <h3 class="coffeeType">Vietnamese Robusta</h3>
+                <h6>Strong and bold Robusta beans, often used in traditional Vietnamese coffee.</h6>
+                
+                
+                <h5>Brewing Method: </h5>
+                <p>Phin filter with sweetened condensed milk for authentic style.</p>
+                <section class="coffee-tasting-note">
+                  <h5>Tasting Notes:</h5>
+                  <div class="tasting-tags">
+                    <span class="tasting-tag acidity">Acidity</span>
+                    <span class="tasting-tag cocoa">Cocoa</span>
+                    <span class="tasting-tag nutty">Nutty</span>
+                    <span class="tasting-tag bitter">Bitter</span>
+                    
+                  </div>
+                </section>
+                <button class="btn" data-name="Vietnamese Robusta" data-price="8.99">Add to Cart</button>
+              </div>
+              <div class="product-card">
+                <img src="images/bag9.jpg" class="photo" alt="Burmese Beans">
+                <div class="price">$ 4.99</div>
+                <h3 class="coffeeType">Burmese Beans</h3>
+                <h6>Grown at high altitudes in Myanmar, this bean is known for its vibrant and complex flavor.</h6>
+                
+                <h5>Brewing Method: </h5>
+                <p>Pour-over or Chemex to highlight clarity and brightness.</p>
+                <section class="coffee-tasting-note">
+                  <h5>Tasting Notes:</h5>
+                  <div class="tasting-tags">
+                    <span class="tasting-tag floral">Floral</span>
+                    <span class="tasting-tag cocoa">Cocoa</span>
+                    <span class="tasting-tag bitter">Bitter</span>
+                    <span class="tasting-tag sweet">Sweet</span>
+                    
+                  </div>
+                </section>
+                <button class="btn" data-name="Burmese Beans" data-price="4.99">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+    </section>
+    <script>
+      function toggleMenu() {
+        const navMenu = document.getElementById("navMenu");
+        navMenu.classList.toggle("active");
+      }
+    </script>
+
+    <script>
+      new Typed('#productSearch', {
+          strings: ["Search for Espresso...", "Try Mocha...", "Type 'Arabica' or 'Blend'..."],
+          typeSpeed: 50,
+          backSpeed: 25,
+          attr: 'placeholder',
+          bindInputFocusEvents: true,
+          loop: true
+      });
+  </script>
+  <script>
+      AOS.init();
+      function filterProducts() {
+          const input = document.getElementById('productSearch').value.toLowerCase();
+          const cards = document.querySelectorAll('.product-card');
+  
+          cards.forEach(card => {
+              const name = card.querySelector('.coffeeType').textContent.toLowerCase();
+              card.style.display = name.includes(input) ? 'block' : 'none';
+          });
+      }
+  </script>
+<script>
+  // Add to cart functionality
+  document.addEventListener('DOMContentLoaded', function () {
+      const addToCartButtons = document.querySelectorAll('.btn');
+      addToCartButtons.forEach(button => {
+          button.addEventListener('click', function () {
+              const name = this.dataset.name;
+              const price = this.dataset.price;
+              const image = this.closest('.product-card').querySelector('.photo').src;
+
+              addToCart(name, price, image);
+              // alert(`${name} has been added to your cart!`);
+              Swal.fire({ 
+                        icon: 'success', 
+                        title: 'Added to Cart!', 
+                        text: `${name} has been added to your cart.`,
+                        showConfirmButton: false, 
+                        timer: 2000, 
+                          });
+          });
+      });
+      // This function should match the one in the cart page
+      function addToCart(name, price, image) {
+          let cart = JSON.parse(localStorage.getItem('cart')) || [];
+          const id = name.toLowerCase().replace(/\s+/g, '-');
+          const existingItem = cart.find(item => item.id === id);
+          if (existingItem) {
+              existingItem.quantity += 1;
+          } else {
+              cart.push({
+                  id,
+                  name,
+                  price: parseFloat(price),
+                  image,
+                  quantity: 1
+              });
+          }
+          localStorage.setItem('cart', JSON.stringify(cart));
+          
+
+          // Optional: Update cart counter in navbar
+          updateCartCounter();
+      }
+
+      // Optional: Function to update cart counter in navbar
+      function updateCartCounter() {
+          const cart = JSON.parse(localStorage.getItem('cart')) || [];
+          const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+
+          // Assuming you have an element with id 'cart-counter' in your navbar
+          const counter = document.getElementById('cart-counter');
+          if (counter) {
+              counter.textContent = totalItems;
+              counter.style.display = totalItems > 0 ? 'block' : 'none';
+          }
+      }
+
+      // Initialize cart counter on page load
+      updateCartCounter();
+  });
+</script>
+
+<footer class="footer">
+        
+  <!-- Logo Column -->
+  <div class="footer-column">
+    <div class="footer-logo">
+      <i class="fas fa-mug-hot"></i> Bean<br>Boutique
+    </div>
+  </div>
+
+  <!-- Privacy -->
+  <div class="footer-column">
+    <h3>PRIVACY</h3>
+    <ul>
+      <li>Terms of use</li>
+      <li>Privacy Policy</li>
+    </ul>
+  </div>
+
+  <!-- Services -->
+  <div class="footer-column">
+    <h3>SERVICES</h3>
+    <ul>
+      <li>Shop</li>
+      <li>Other Services</li>
+      <li>Menu</li>
+    </ul>
+  </div>
+
+  <!-- About Us -->
+  <div class="footer-column">
+    <h3>ABOUT US</h3>
+    <ul>
+      <li>Find Information</li>
+      <li>About us</li>
+      <li>Our Vision</li>
+    </ul>
+  </div>
+
+  <!-- Information -->
+  <div class="footer-column">
+    <h3>INFORMATION</h3>
+    <ul>
+      <li>Sell Your Products</li>
+      <li>Products & Prices</li>
+    </ul>
+  </div>
+
+  <!-- Social Media -->
+  <div class="footer-column">
+    <h3>SOCIAL MEDIA</h3>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-youtube" style="color:red;"></i></a>
+      <a href="#"><i class="fab fa-instagram" style="color:#f09433;"></i></a>
+      <a href="#"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <!-- AOS.js -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Brewing Equipment</title>
+</head>
+<body>
+    
+  <header>
+      <div class="top">
+        <div class="logo">
+          <i class="fa-solid fa-mug-hot"></i>
+          Bean Boutique
+        </div>
+        
+        <!-- Hamburger Icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+  
+        <!-- Menu -->
+        <nav class="menu" id="navMenu">
+          <ul>
+            <li><a href="beanboutique.html" >Home</a></li>
+            <li><a href="coffeeselection.html" >Coffee Selections</a></li>
+            <li class="current"><a href="brewing-equipment.html" >Brewing Equipments</a></li>
+            <li><a href="#">Services ⏷</a>
+              <div class="dropdown">
+                  <a href="events.html">Events & Workshops</a>
+                  <a href="offers.html">Special Offers & Membership Deals</a>
+              </div>
+            </li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="signin.html">Sign In</a></li>
+          </ul>
+        </nav>
+  
+        <!-- Search -->
+        <div class="searchBox">
+          <input type="text" id="productSearch" placeholder="Search.." onkeyup="filterProducts()">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+  </header>
+    <section class="equipment-section">
+        <h1 class="heading">Brew Like a Barista</h1>
+        <p class="subheading">Elevate your daily ritual with tools that bring out the best in every bean.</p>
+    
+        <div class="equipment-grid">
+          <!-- Product 1 -->
+          <div class="equipment-card">
+            <img src="images/DripCoffeeMaker.jpeg" class="photo" alt=" Drip Coffee Maker">
+            <div class="equipment-info">
+              <div class="title-price">
+                <h3> Drip Coffee Maker</h3>
+                <span class="size">$170</span>
+              </div>
+              <p>A classic countertop machine that drips hot water over ground coffee into a carafe.</p>
+              <div class="usage-tips">
+                <h4>Usage Tips:</h4>
+                <ul>
+                  <li>Use medium grind coffee.</li>
+                  <li>Clean the filter basket and carafe daily to avoid bitterness.</li>
+                  <li> Preheat the carafe for better temperature retention.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="btn-center">
+                <button class="btn" data-name="Drip Coffee Maker" data-price="170">Add to Cart</button>
+            </div>
+            
+          </div>
+    
+          <div class="equipment-card">
+            <img src="images/FrenchPress.jpg" class="photo" alt=" French Press (Press Pot)" >
+            <div class="equipment-info">
+              <div class="title-price">
+                <h3>French Press</h3>
+                <span class="size">$220</span>
+              </div>
+              <p>A manual brewer that steeps coarse coffee grounds in hot water before plunging.</p>
+              <div class="usage-tips">
+                <h4>Usage Tips:</h4>
+                <ul>
+                  <li>Use coarse-ground coffee to avoid sediment.</li>
+                  <li>Brew for 4 minutes before plunging.</li>
+                  <li>Stir halfway through brewing for even extraction.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="btn-center">
+                <button class="btn" data-name="French Press (Press Pot)" data-price="220">Add to Cart</button>
+            </div>
+            
+          </div>
+    
+          <div class="equipment-card">
+            <img src="images/EspressoMachine.webp" class="photo" alt="Espresso Machine" >
+            <div class="equipment-info">
+              <div class="title-price">
+                <h3>Espresso Machine</h3>
+                <span class="size">$470</span>
+              </div>
+              <p>Forces hot water through finely ground coffee under pressure to create a concentrated shot.</p>
+              <div class="usage-tips">
+                <h4>Usage Tips:</h4>
+                <ul>
+                  <li>Use fresh, finely ground beans (espresso grind).</li>
+                  <li>Tamp the grounds evenly.</li>
+                  <li>Clean the group head and portafilter regularly.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="btn-center">
+                <button class="btn" data-name="Espresso Machine" data-price="470">Add to Cart</button>
+            </div>
+            
+          </div>
+          <div class="equipment-card">
+            <img src="images/PourOver.jpg" class="photo" alt="Pour-Over " >
+            <div class="equipment-info">
+              <div class="title-price">
+                <h3>Pour-Over </h3>
+                <span class="size">$120</span>
+              </div>
+              <p> Manual brewing where hot water is poured over coffee in a filter cone.</p>
+              <div class="usage-tips">
+                <h4>Usage Tips:</h4>
+                <ul>
+                  <li>Use medium-fine grind.</li>
+                  <li>Pour in slow, circular motions.</li>
+                  <li>Bloom the coffee for 30 seconds before continuing to pour.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="btn-center">
+                <button class="btn" data-name="Pour-Over" data-price="120">Add to Cart</button>
+            </div>
+            
+          </div>
+          <div class="equipment-card">
+            <img src="images/AeroPress.jpeg" class="photo" alt="AeroPress" >
+            <div class="equipment-info">
+              <div class="title-price">
+                <h3>AeroPress</h3>
+                <span class="size">$160</span>
+              </div>
+              <p>A portable brewer that uses air pressure to push hot water through coffee.</p>
+              <div class="usage-tips">
+                <h4>Usage Tips:</h4>
+                <ul>
+                  <li>Use fine to medium-fine grind.</li>
+                  <li>Try both standard and inverted methods.</li>
+                  <li>Brew for 1–2 minutes for a strong, smooth cup.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="btn-center">
+                <button class="btn" data-name="AeroPress" data-price="160">Add to Cart</button>
+            </div>
+            
+          </div>
+          <div class="equipment-card">
+            <img src="images/ColdBrewMaker.avif" class="photo" alt="Cold Brew Maker" >
+            <div class="equipment-info">
+              <div class="title-price">
+                <h3>Cold Brew Maker</h3>
+                <span class="size">$93</span>
+              </div>
+              <p>Steeps coarse coffee in cold water for 12–24 hours for a smooth, low-acid brew..</p>
+              <div class="usage-tips">
+                <h4>Usage Tips:</h4>
+                <ul>
+                  <li>Use a 1:4 coffee-to-water ratio for concentrate.</li>
+                  <li>Steep in the fridge, not at room temp.</li>
+                  <li> Dilute with water or milk before serving.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="btn-center">
+                <button class="btn" data-name="Cold Brew Make" data-price="93">Add to Cart</button>
+            </div>
+          </div>     
+        </div>
+      </section>
+
+      <footer class="footer">
+        
+        <!-- Logo Column -->
+        <div class="footer-column">
+          <div class="footer-logo">
+            <i class="fas fa-mug-hot"></i> Bean<br>Boutique
+          </div>
+        </div>
+      
+        <!-- Privacy -->
+        <div class="footer-column">
+          <h3>PRIVACY</h3>
+          <ul>
+            <li>Terms of use</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+      
+        <!-- Services -->
+        <div class="footer-column">
+          <h3>SERVICES</h3>
+          <ul>
+            <li>Shop</li>
+            <li>Other Services</li>
+            <li>Menu</li>
+          </ul>
+        </div>
+      
+        <!-- About Us -->
+        <div class="footer-column">
+          <h3>ABOUT US</h3>
+          <ul>
+            <li>Find Information</li>
+            <li>About us</li>
+            <li>Our Vision</li>
+          </ul>
+        </div>
+      
+        <!-- Information -->
+        <div class="footer-column">
+          <h3>INFORMATION</h3>
+          <ul>
+            <li>Sell Your Products</li>
+            <li>Products & Prices</li>
+          </ul>
+        </div>
+      
+        <!-- Social Media -->
+        <div class="footer-column">
+          <h3>SOCIAL MEDIA</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-youtube" style="color:red;"></i></a>
+            <a href="#"><i class="fab fa-instagram" style="color:#f09433;"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </footer>
+      
+      <script>
+        function toggleMenu() {
+          const navMenu = document.getElementById("navMenu");
+          navMenu.classList.toggle("active");
+        }
+      </script>
+
+      <script>
+        // Add to cart functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const addToCartButtons = document.querySelectorAll('.btn');
+      
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const name = this.dataset.name;
+                    const price = this.dataset.price;
+                    const image = this.closest('.equipment-card').querySelector('.photo').src;
+      
+                    addToCart(name, price, image);
+                });
+            });
+      
+            // This function should match the one in the cart page
+            function addToCart(name, price, image) {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      
+                const id = name.toLowerCase().replace(/\s+/g, '-');
+                const existingItem = cart.find(item => item.id === id);
+      
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cart.push({
+                        id,
+                        name,
+                        price: parseFloat(price),
+                        image,
+                        quantity: 1
+                    });
+                }
+      
+                localStorage.setItem('cart', JSON.stringify(cart));
+                // alert(`${name} has been added to your cart!`);
+                Swal.fire({ 
+                    icon: 'success', 
+                    title: 'Added to Cart!', 
+                    text: `${name} has been added to your cart.`,
+                    showConfirmButton: false, 
+                    timer: 2000, 
+                       });
+      
+                // Optional: Update cart counter in navbar
+                updateCartCounter();
+            }
+      
+            // Optional: Function to update cart counter in navbar
+            function updateCartCounter() {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+      
+                // Assuming you have an element with id 'cart-counter' in your navbar
+                const counter = document.getElementById('cart-counter');
+                if (counter) {
+                    counter.textContent = totalItems;
+                    counter.style.display = totalItems > 0 ? 'block' : 'none';
+                }
+            }
+      
+            // Initialize cart counter on page load
+            updateCartCounter();
+        });
+      </script>
+</body>
+</html>
