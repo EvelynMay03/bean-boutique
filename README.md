@@ -25,6 +25,20 @@ Through this project, I gained practical experience in frontend web development 
 - Special offers and promotions
 - Sign-in page interface
 - Responsive website layout
+  
+## 📸 Screenshots
+
+### Homepage
+![Bean Boutique Homepage](screenshots/Homepage.png)
+
+### Coffee Selection
+![Coffee Selection Page](screenshots/coffee-selection.png)
+
+### Brewing Equipment
+![Brewing Equipment Page](screenshots/brewing-equipment.png)
+
+### Services
+![Services Page](screenshots/services.png)
 
 ## 🚀 How to Run
 
